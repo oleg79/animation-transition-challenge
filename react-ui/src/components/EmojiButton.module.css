@@ -1,0 +1,15 @@
+.button {
+    border-radius: var(--border-round);
+    background-color: var(--primary-color);
+    width: 100px;
+    aspect-ratio: 1;
+    border: 1px solid #c8cad9;
+    outline: none;
+    font-size: 40px;
+    cursor: pointer;
+    transition: opacity .4s ease-in-out;
+}
+
+.button:hover {
+    opacity: .8;
+}
