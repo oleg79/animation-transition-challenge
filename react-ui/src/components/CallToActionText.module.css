@@ -1,0 +1,5 @@
+.text {
+    font-family: Verdana, 'sans-serif';
+    color: #83878c;
+    margin-top: var(--spacing-12);
+}
