@@ -1,16 +1,27 @@
 .button {
     position: relative;
     border-radius: var(--border-round);
-    background-color: var(--primary-color);
     width: 100px;
     aspect-ratio: 1;
-    border: 2px solid #c8cad9;
+    border: none;
     outline: none;
     font-size: 40px;
     cursor: pointer;
+}
+
+
+.button > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #c8cad9;
+    border-radius: var(--border-round);
+    z-index: 2;
+    background-color: var(--primary-color);
+    aspect-ratio: 1;
     transition: opacity .4s ease-in-out;
 }
 
-.button:hover {
+.button:hover > span {
     opacity: .8;
 }
