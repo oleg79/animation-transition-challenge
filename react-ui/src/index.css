@@ -1,3 +1,17 @@
+:root {
+  /* COLORS */
+  --primary-color: #e7e9fa;
+  --secondary-color: #2b0480;
+
+  /* BORDER-RADIUS */
+  --border-round: 100%;
+  --border-16: 16px;
+  --border-8: 8px;
+
+  /* SPACING */
+  --spacing-16: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
