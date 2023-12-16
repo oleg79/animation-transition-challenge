@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ pulse: playPulseAnimation }">
   <div class="view" (click)="switchView($event, currentView === 'popup')" [@transformView]="currentView">
     <span class="emoji" [@transitionEmoji]="currentView">
       {{ buttonEmoji }}

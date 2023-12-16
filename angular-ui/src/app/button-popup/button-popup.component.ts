@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
-import {NgClass, NgIf} from "@angular/common";
+import {NgClass} from "@angular/common";
 import {
   animate,
   animateChild, AnimationEvent,
@@ -24,7 +24,7 @@ type TViewState = keyof typeof ViewState;
 @Component({
   selector: 'app-button-popup',
   standalone: true,
-  imports: [NgClass, NgIf],
+  imports: [NgClass],
   templateUrl: './button-popup.component.html',
   styleUrl: './button-popup.component.sass',
   animations: [
