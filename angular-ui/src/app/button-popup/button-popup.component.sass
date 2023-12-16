@@ -1,0 +1,47 @@
+@import "../../variables"
+@import "../../mixins"
+
+.container
+  position: relative
+  width: 100px
+  aspect-ratio: 1
+  margin-block: $spacing-20
+  isolation: isolate
+
+.view
+  @include absolute-center
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 2px solid $border-color
+  background-color: $secondary-color
+  overflow: hidden
+
+.emoji
+  font-size: $font-size-40
+  position: absolute
+
+.popup
+  position: absolute
+  display: flex
+  align-items: center
+  flex-direction: column
+  height: calc(100% - $spacing-40 * 2)
+  overflow: auto
+  padding: $spacing-40
+  font-size: $font-size-25
+
+.headline
+  font-size: $font-size-70
+  margin-bottom: $spacing-30
+
+.close-btn
+  width: 100%
+  margin-top: $spacing-30
+  padding: $spacing-20
+  border-radius: $border-radius-10
+  color: $secondary-color
+  background-color: $primary-color
+  font-size: $font-size-25
+  cursor: pointer
+
