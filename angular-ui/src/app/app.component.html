@@ -1,0 +1,20 @@
+<main class="main">
+  <h1 class="heading">Hello there!</h1>
+  <div class="container" @blockInitialMountAnimation>
+    <app-emoji-button
+      emoji="🔥"
+      [animate]="animateButton"
+      (togglePopupEvent)="togglePopup($event)"
+      *ngIf="!isPopupOpen"
+      @triggerChildTransition
+    />
+    <app-popup
+      text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aperiam aut commodi corporis, cum debitis delectus distinctio dolor dolores earum enim error esse excepturi fugit id ipsam ipsum iusto, laboriosam nesciunt perferendis perspiciatis praesentium quam quasi quidem rem reprehenderit saepe sint sunt totam ullam veritatis voluptas voluptatibus? Excepturi facilis illum minima modi nam praesentium reprehenderit velit. Autem dolores est molestias officia praesentium repellendus, suscipit? Aperiam at blanditiis consectetur cupiditate dicta eligendi eveniet hic illum magnam minima officiis optio perferendis quis, recusandae reiciendis sapiente similique sunt, tenetur vitae, voluptas. Ab aliquid dolore expedita explicabo illum nihil perspiciatis, quam ratione voluptatibus. Commodi, modi quibusdam. Cum deleniti, doloremque excepturi magnam molestiae molestias non officia, placeat provident quam quia sapiente totam. Ipsum iste minus obcaecati perspiciatis qui. Aliquid dicta eligendi laudantium molestias quidem quis repellendus rerum unde vel voluptate! A eligendi eum hic placeat vel! Aliquid culpa dignissimos fuga magnam minus. Iste laudantium modi perspiciatis, quibusdam vero voluptatem voluptatum? Ab ad, asperiores atque consequatur, cumque dolore dolores eius excepturi explicabo hic impedit ipsam nam odio pariatur quia sit vitae, voluptas. A accusantium amet dicta dolor eveniet harum, incidunt nulla optio quisquam reiciendis saepe sequi sint sit, soluta tempore temporibus veritatis. Dicta odio, quam?"
+      (togglePopupEvent)="togglePopup($event)"
+      *ngIf="isPopupOpen"
+      @triggerChildTransition
+    />
+  </div>
+  <span>Click me!</span>
+</main>
+

@@ -1,0 +1,5 @@
+<div class="button-container" @buttonContainerTransition>
+  <button class="button pulse" [ngClass]="{pulse: animate}" (click)="onClick()" @buttonTransition>
+    <span @fireTransition>{{ emoji }}</span>
+  </button>
+</div>

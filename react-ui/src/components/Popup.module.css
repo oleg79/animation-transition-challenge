@@ -1,0 +1,54 @@
+.popup {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    background-color: var(--primary-color);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: min(calc(100dvw - 100px), 600px);
+    height: calc(100dvh - 200px);
+    border: 2px solid #c8cad9;
+    border-radius: var(--border-16);
+    font-size: 20px;
+
+    overflow: auto;
+    visibility: hidden;
+}
+
+.popup > h3 {
+    font-size: 40px;
+    margin-bottom: var(--spacing-24);
+}
+
+.button {
+    margin-top: var(--spacing-24);
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+.transitionToButton {
+    transition: opacity var(--transition-speed) ease, visibility 0s linear var(--transition-speed);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.transitionToPopup {
+    transition: opacity var(--transition-speed) ease var(--transition-delay), visibility 0s linear var(--transition-delay);
+    visibility: visible;
+    opacity: 1;
+}
