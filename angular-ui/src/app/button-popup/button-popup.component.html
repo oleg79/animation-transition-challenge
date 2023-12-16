@@ -1,0 +1,13 @@
+<div class="container" [ngClass]="{ pulse: playPulseAnimation }">
+  <div class="view" (click)="switchView($event, currentView === 'popup')" [@transformView]="currentView">
+    <span class="emoji" [@transitionEmoji]="currentView">
+      {{ buttonEmoji }}
+    </span>
+
+    <div class="popup" #popup [@transitionContent]="currentView" (@transitionContent.start)="restoreScroll($event)">
+      <h3 class="headline">{{ popupTitle }}</h3>
+      {{ popupText }}
+      <button class="close-btn" (click)="switchView($event, currentView === 'button')">close</button>
+    </div>
+  </div>
+</div>
