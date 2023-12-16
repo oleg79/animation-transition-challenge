@@ -5,20 +5,19 @@ import styles from './EmojiButton.module.css';
 
 export type EmojiButtonProps = {
   emoji: string;
-  isPopupOpen: boolean | null
+  isPopupOpen: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>
 export const EmojiButton: React.FC<EmojiButtonProps> = ({ emoji, isPopupOpen, ...attributeProps }) => {
 
-  let anim;
-  if (isPopupOpen === true) anim = styles.transitionToPopup;
-  if (isPopupOpen === false) anim = styles.transitionToButton;
 
   return (
-    <button
-      {...attributeProps}
-      className={`${styles.button} ${anim}`}
-    >
-      <span>{emoji}</span>
-    </button>
+    <div className={`${styles.buttonContainer} ${isPopupOpen ? styles.transitionToPopup : styles.transitionToButton}`}>
+      <button
+        {...attributeProps}
+        className={`${styles.button} `}
+      >
+        {emoji}
+      </button>
+    </div>
   );
 }
